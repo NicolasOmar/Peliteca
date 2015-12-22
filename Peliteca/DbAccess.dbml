@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Peliteca" Class="DbAccessDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ALEXANDER\ADMIN;Initial Catalog=Peliteca;Integrated Security=True" SettingsObjectName="Peliteca.Properties.Settings" SettingsPropertyName="PelitecaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Actores" Member="Actores">
+    <Type Name="Actores">
+      <Column Name="idActor" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nomActor" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="apeActor" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="sexo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="fecNac" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Association Name="Actores_PeliActor" Member="PeliActor" ThisKey="idActor" OtherKey="idActor" Type="PeliActor" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuarios" Member="Usuarios">
+    <Type Name="Usuarios">
+      <Column Name="nomUser" Type="System.String" DbType="NVarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="passUser" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Directores" Member="Directores">
+    <Type Name="Directores">
+      <Column Name="idDirec" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nomDirec" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="apeDirec" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="fecNac" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Association Name="Directores_Peliculas" Member="Peliculas" ThisKey="idDirec" OtherKey="idDirec" Type="Peliculas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Generos" Member="Generos">
+    <Type Name="Generos">
+      <Column Name="idGen" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="genero" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Association Name="Generos_Peliculas" Member="Peliculas" ThisKey="idGen" OtherKey="idGen" Type="Peliculas" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Paises" Member="Paises">
+    <Type Name="Paises">
+      <Column Name="idPais" Type="System.Int16" DbType="SmallInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pais" Type="System.String" DbType="NVarChar(35)" CanBeNull="true" />
+      <Association Name="Paises_PeliPais" Member="PeliPais" ThisKey="idPais" OtherKey="idPais" Type="PeliPais" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PeliActor" Member="PeliActor">
+    <Type Name="PeliActor">
+      <Column Name="idPeli" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idActor" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Actores_PeliActor" Member="Actores" ThisKey="idActor" OtherKey="idActor" Type="Actores" IsForeignKey="true" />
+      <Association Name="Peliculas_PeliActor" Member="Peliculas" ThisKey="idPeli" OtherKey="idPeli" Type="Peliculas" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Peliculas" Member="Peliculas">
+    <Type Name="Peliculas">
+      <Column Name="idPeli" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="titulo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="idDirec" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="anio" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="idGen" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="duracion" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="foto" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Peliculas_PeliActor" Member="PeliActor" ThisKey="idPeli" OtherKey="idPeli" Type="PeliActor" />
+      <Association Name="Peliculas_PeliPais" Member="PeliPais" ThisKey="idPeli" OtherKey="idPeli" Type="PeliPais" />
+      <Association Name="Directores_Peliculas" Member="Directores" ThisKey="idDirec" OtherKey="idDirec" Type="Directores" IsForeignKey="true" />
+      <Association Name="Generos_Peliculas" Member="Generos" ThisKey="idGen" OtherKey="idGen" Type="Generos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PeliPais" Member="PeliPais">
+    <Type Name="PeliPais">
+      <Column Name="idPeli" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idPais" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Paises_PeliPais" Member="Paises" ThisKey="idPais" OtherKey="idPais" Type="Paises" IsForeignKey="true" />
+      <Association Name="Peliculas_PeliPais" Member="Peliculas" ThisKey="idPeli" OtherKey="idPeli" Type="Peliculas" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

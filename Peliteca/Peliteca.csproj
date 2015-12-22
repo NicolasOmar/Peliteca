@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6093AA95-B9D3-4FB6-A5F1-163616306578}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Peliteca</RootNamespace>
+    <AssemblyName>Peliteca</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1435807068_movie.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Peliteca.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccesoSistema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccesoSistema.Designer.cs">
+      <DependentUpon>AccesoSistema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Actor.cs" />
+    <Compile Include="AgregarActor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarActor.Designer.cs">
+      <DependentUpon>AgregarActor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarDirector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarDirector.Designer.cs">
+      <DependentUpon>AgregarDirector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarGenero.Designer.cs">
+      <DependentUpon>AgregarGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarPais.Designer.cs">
+      <DependentUpon>AgregarPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarPelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarPelicula.Designer.cs">
+      <DependentUpon>AgregarPelicula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarActor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarActor.Designer.cs">
+      <DependentUpon>BuscarActor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarDirector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarDirector.Designer.cs">
+      <DependentUpon>BuscarDirector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarGenero.Designer.cs">
+      <DependentUpon>BuscarGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarPais.Designer.cs">
+      <DependentUpon>BuscarPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarPelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarPelicula.Designer.cs">
+      <DependentUpon>BuscarPelicula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbAccess.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbAccess.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Director.cs" />
+    <Compile Include="Genero.cs" />
+    <Compile Include="ListaActores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaActores.Designer.cs">
+      <DependentUpon>ListaActores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaDirectores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaDirectores.Designer.cs">
+      <DependentUpon>ListaDirectores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaGeneros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaGeneros.Designer.cs">
+      <DependentUpon>ListaGeneros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaPaises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaPaises.Designer.cs">
+      <DependentUpon>ListaPaises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaPeliculas.Designer.cs">
+      <DependentUpon>ListaPeliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuActores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuActores.Designer.cs">
+      <DependentUpon>MenuActores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuDirectores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuDirectores.Designer.cs">
+      <DependentUpon>MenuDirectores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuGeneros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuGeneros.Designer.cs">
+      <DependentUpon>MenuGeneros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPaises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPaises.Designer.cs">
+      <DependentUpon>MenuPaises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPeliculas.Designer.cs">
+      <DependentUpon>MenuPeliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarActor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarActor.Designer.cs">
+      <DependentUpon>ModificarActor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarDirector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarDirector.Designer.cs">
+      <DependentUpon>ModificarDirector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarPelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarPelicula.Designer.cs">
+      <DependentUpon>ModificarPelicula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarUser.Designer.cs">
+      <DependentUpon>ModificarUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pais.cs" />
+    <Compile Include="Pelicula.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UnicaInstancia.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="VerActor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerActor.Designer.cs">
+      <DependentUpon>VerActor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerDirector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerDirector.Designer.cs">
+      <DependentUpon>VerDirector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerGenero.Designer.cs">
+      <DependentUpon>VerGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerPais.Designer.cs">
+      <DependentUpon>VerPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VerPelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerPelicula.Designer.cs">
+      <DependentUpon>VerPelicula.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccesoSistema.resx">
+      <DependentUpon>AccesoSistema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarActor.resx">
+      <DependentUpon>AgregarActor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarDirector.resx">
+      <DependentUpon>AgregarDirector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarGenero.resx">
+      <DependentUpon>AgregarGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarPais.resx">
+      <DependentUpon>AgregarPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarPelicula.resx">
+      <DependentUpon>AgregarPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarActor.resx">
+      <DependentUpon>BuscarActor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarDirector.resx">
+      <DependentUpon>BuscarDirector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarGenero.resx">
+      <DependentUpon>BuscarGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarPais.resx">
+      <DependentUpon>BuscarPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaActores.resx">
+      <DependentUpon>ListaActores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaDirectores.resx">
+      <DependentUpon>ListaDirectores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaGeneros.resx">
+      <DependentUpon>ListaGeneros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaPaises.resx">
+      <DependentUpon>ListaPaises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuActores.resx">
+      <DependentUpon>MenuActores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDirectores.resx">
+      <DependentUpon>MenuDirectores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuGeneros.resx">
+      <DependentUpon>MenuGeneros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPaises.resx">
+      <DependentUpon>MenuPaises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarActor.resx">
+      <DependentUpon>ModificarActor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarDirector.resx">
+      <DependentUpon>ModificarDirector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarPelicula.resx">
+      <DependentUpon>ModificarPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarUser.resx">
+      <DependentUpon>ModificarUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerActor.resx">
+      <DependentUpon>VerActor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerDirector.resx">
+      <DependentUpon>VerDirector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerGenero.resx">
+      <DependentUpon>VerGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerPais.resx">
+      <DependentUpon>VerPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerPelicula.resx">
+      <DependentUpon>VerPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DbAccess.dbml.layout">
+      <DependentUpon>DbAccess.dbml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="BuscarPelicula.resx">
+      <DependentUpon>BuscarPelicula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaPeliculas.resx">
+      <DependentUpon>ListaPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPeliculas.resx">
+      <DependentUpon>MenuPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DbAccess.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DbAccess.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1435807068_movie.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

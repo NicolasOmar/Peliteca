@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.5" name="DbAccess">
+  <DataContextMoniker Name="/DbAccessDataContext" />
+  <nestedChildShapes>
+    <classShape Id="51387516-5cab-40f7-bb97-3704c432c3fa" absoluteBounds="3.5, 7.5, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DbAccessDataContext/Actores" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd30a24c-1ebd-4045-95b1-b90650d25673" absoluteBounds="3.515, 7.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9f63b3fa-add5-4d4c-8290-5624a7753dbd" absoluteBounds="6.75, 5.5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DbAccessDataContext/Usuarios" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1ce4bfcd-ae37-4a71-a4ea-b717281accaf" absoluteBounds="6.765, 5.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="718f294e-ee47-4691-8eab-48dd4c47d8ef" absoluteBounds="0.75, 6.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DbAccessDataContext/Directores" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ffaf47c-4eb6-441c-b0f5-dfb7ee2de29f" absoluteBounds="0.765, 6.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4f28a06d-d0ec-475b-8304-e9fb9aad0c26" absoluteBounds="0.75, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DbAccessDataContext/Generos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="464d268d-c471-4bbd-83c8-8edbd5c92795" absoluteBounds="0.765, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c7339df0-a6af-4ff9-8878-134a99ef198d" absoluteBounds="3.5, 5.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DbAccessDataContext/Paises" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a05daabf-992c-490f-b7ff-3921a30ac9b5" absoluteBounds="3.515, 5.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="493522bc-cde8-4c75-a3eb-775541f0a0ca" absoluteBounds="6.25, 2.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DbAccessDataContext/PeliActor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="47a5a7b8-e4b5-4772-a1f6-f3318cd6b9e3" absoluteBounds="6.265, 3.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3f7ae6e3-9bd6-45c4-b41e-d37e1da1324a" absoluteBounds="3.5, 2.25, 2, 2.155499674479167">
+      <DataClassMoniker Name="/DbAccessDataContext/Peliculas" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ab806593-c33b-4cfc-af0c-f09b65728848" absoluteBounds="3.515, 2.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d9ae4e51-775b-4f1e-ae39-a02b590715fd" absoluteBounds="6.25, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DbAccessDataContext/PeliPais" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d02e35f0-e63e-4c11-8082-af6809b2984a" absoluteBounds="6.265, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 8.38544840494792); (6.46875 : 8.38544840494792); (6.46875 : 3.94399251302083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DbAccessDataContext/Actores/Actores_PeliActor" />
+      <nodes>
+        <classShapeMoniker Id="51387516-5cab-40f7-bb97-3704c432c3fa" />
+        <classShapeMoniker Id="493522bc-cde8-4c75-a3eb-775541f0a0ca" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.34699625651042); (5.79166666666667 : 3.34699625651042 : JumpStart); (5.95833333333333 : 3.34699625651042 : JumpEnd); (6.25 : 3.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DbAccessDataContext/Peliculas/Peliculas_PeliActor" />
+      <nodes>
+        <classShapeMoniker Id="3f7ae6e3-9bd6-45c4-b41e-d37e1da1324a" />
+        <classShapeMoniker Id="493522bc-cde8-4c75-a3eb-775541f0a0ca" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.50121330413662); (3.125 : 6.12621330413662); (3.125 : 3.32774983723958); (3.5 : 3.32774983723958)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DbAccessDataContext/Directores/Directores_Peliculas" />
+      <nodes>
+        <classShapeMoniker Id="718f294e-ee47-4691-8eab-48dd4c47d8ef" />
+        <classShapeMoniker Id="3f7ae6e3-9bd6-45c4-b41e-d37e1da1324a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.69837117513021); (3.04166666666667 : 3.69837117513021 : JumpStart); (3.20833333333333 : 3.69837117513021 : JumpEnd); (3.5 : 3.69837117513021)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DbAccessDataContext/Generos/Generos_Peliculas" />
+      <nodes>
+        <classShapeMoniker Id="4f28a06d-d0ec-475b-8304-e9fb9aad0c26" />
+        <classShapeMoniker Id="3f7ae6e3-9bd6-45c4-b41e-d37e1da1324a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.25); (5.875 : 4.875); (5.875 : 2.31899251302083); (6.25 : 1.94399251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DbAccessDataContext/Paises/Paises_PeliPais" />
+      <nodes>
+        <classShapeMoniker Id="c7339df0-a6af-4ff9-8878-134a99ef198d" />
+        <classShapeMoniker Id="d9ae4e51-775b-4f1e-ae39-a02b590715fd" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 2.25); (4.5 : 1.31574375651042); (6.25 : 1.31574375651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DbAccessDataContext/Peliculas/Peliculas_PeliPais" />
+      <nodes>
+        <classShapeMoniker Id="3f7ae6e3-9bd6-45c4-b41e-d37e1da1324a" />
+        <classShapeMoniker Id="d9ae4e51-775b-4f1e-ae39-a02b590715fd" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
