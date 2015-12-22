@@ -1,2 +1,3 @@
 # Peliteca
-Proyecto basado en .NET 4.0 + uso de LinQ to SQL para conectar a una base de datos SQL Server.
+Tecnologias usadas: .NET 4.0 + LinQ to SQL | Base de Datos : SQL Server.
+Finalidad: Manejar una BD de peliculas con sus respectivos datos a traves de una interfaz visual en C#
