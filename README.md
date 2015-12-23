@@ -1,3 +1,7 @@
 # Peliteca
-Tecnologias usadas: .NET 4.0 + LinQ to SQL | Base de Datos : SQL Server.
-Finalidad: Manejar una BD de peliculas con sus respectivos datos a traves de una interfaz visual en C#
+Sistema a medida administrador de peliculas (actores, paises, directores, etc).
+
+Tecnologias usadas: .NET 4.0 (Windows Forms con C# + LinQ to SQL).
+Base de Datos : T-SQL (SQL Server 2015).
+
+Funciones: Trabajando en ello...
